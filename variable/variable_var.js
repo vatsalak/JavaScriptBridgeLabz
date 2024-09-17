@@ -28,4 +28,16 @@ function foo2(){
 }
 foo2();
 console.log(test5);
+
 //We did not get any error while redeclaring the variable inside another function scope and the original value of the variable is preserved.
+function foo3(){
+   let a=10;
+
+   //let a=11;
+   a=12;
+   console.log("a from function scope----",a);
+   {
+    let a=11;
+    console.log("a from block scope----",a);
+   }    
+}
