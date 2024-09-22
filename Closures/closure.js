@@ -24,3 +24,18 @@ closure();
 // innerFunction is a closure because it captures the outerVariable from its parent scope (outerFunction).
 // Even after outerFunction has finished execution,
 //  innerFunction still has access to outerVariable because of the closure.
+//Example 2 of Closures in js
+function fun1Outer()
+{
+    let count=0;
+     function fn2 ()
+    {
+        count++;
+        console.log(count);
+        
+    }
+    return fn2;
+   
+}
+const closure1=fun1Outer();
+closure1();
